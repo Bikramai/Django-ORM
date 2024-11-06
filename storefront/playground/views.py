@@ -7,7 +7,7 @@ from store.models import Product
 
 def say_hello(request):
     # Keyword=value, range,
-    queryset = Product.objects.filter(last_update__year=2021)
+    queryset = Product.objects.filter(description__isnull=True)
     
         
     return render(request, 'hello.html', {'name': 'Bikram', 'products': list(queryset)})
