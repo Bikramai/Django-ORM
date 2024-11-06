@@ -6,8 +6,8 @@ from store.models import Product
 
 
 def say_hello(request):
-    # Keyword=value, range,
-    queryset = Product.objects.filter(description__isnull=True)
+    # Products: inventory < 10 AND Price < 20
+    queryset = Product.objects.filter(inventory__lt=10, unit_price__lt=20)
     
         
     return render(request, 'hello.html', {'name': 'Bikram', 'products': list(queryset)})
