@@ -7,8 +7,8 @@ from store.models import Product
 
 
 def say_hello(request):
-    product = Product.objects.order_by('unit_price')[0]
-    product = Product.objects.earliest('unit_price')
+    # 0, 1, 2, 3, 4
+    queryset = Product.objects.all()[:5]
     
         
-    return render(request, 'hello.html', {'name': 'Bikram', 'products': product})
+    return render(request, 'hello.html', {'name': 'Bikram', 'products': queryset})
