@@ -8,7 +8,7 @@ from store.models import Product
 
 def say_hello(request):
 
-    queryset = Product.objects.values('id', 'title', 'collection__title')
+    queryset = Product.objects.values_list('id', 'title', 'collection__title')
     
         
     return render(request, 'hello.html', {'name': 'Bikram', 'products': queryset})
