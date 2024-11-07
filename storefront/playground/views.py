@@ -7,7 +7,7 @@ from store.models import Product, OrderItem
 
 
 def say_hello(request):
-    queryset = Product.objects.only('id', 'title')
+    queryset = Product.objects.defer('description')
     
        
     return render(request, 'hello.html', {'name': 'Bikram', 'products': queryset})
