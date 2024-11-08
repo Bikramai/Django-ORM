@@ -1,1 +1,25 @@
 # Django-ORM
+
+- Creating and Setup Database
+- Managers and QuerySets
+- Retrieving Objects
+- Filtering Objects
+- Complex Lookup Using Q Objects
+- Referencing Fields using F Objects
+- Sorting
+- Limiting Results
+- Selecting Fields to Query
+- Deferring Fields
+- Selecting Related Objects
+- Aggregating Objects
+- Annotating Objects
+- Calling Database Functions
+- Grouping Data
+- Working with Expression Wrappers
+- Querying Generic Relationships
+- Custom Managers
+- Understanding QuerySet Cache
+- Creating Objects
+- Deleting Objects
+- Transactions
+- Executing Raw SQL Queries
