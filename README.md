@@ -1,4 +1,12 @@
-# Django-ORM
+# Django-ORM + Database SQL
+
+Object-Relational Mappers(ORM) and the problem they try to solve. So we know that in realtional databases, data is stored as rows in tables. So when pulling up data from a relational database, we need to map these rows into objects. In the past, we used to do this by hand. And this was pretty repetitive and time consuming. So we would have to write a SQL query, send it to database, read the results, and mapped it a bunch of objects. So for each record, we will have to create a new object and set its attributes. This is where an object relational mapper comes into the picture. An object relational mapper, as the name implies, maps objects to relational records and that freezes us from writing a lot of repetitive code. So using an ORM, we don’t have to write SQL code to query or manipulate data, we can code in an object oriented programming language like Python, the ORM will then translate our Python code into SQL code at runtime.
+
+## Benefits
+
+- Reduce Complexity in Code
+- Make the code more understandable
+- Help us get more done in less time
 
 - Creating and Setup Database
 - Managers and QuerySets
