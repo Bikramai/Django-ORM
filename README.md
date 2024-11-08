@@ -8,7 +8,7 @@ Object-Relational Mappers(ORM) and the problem they try to solve. So we know tha
 - Make the code more understandable
 - Help us get more done in less time
 
-## Django-ORM We learn
+## Django-ORM Keywords We Learn
 
 - Creating and Setup Database
 - Managers and QuerySets
