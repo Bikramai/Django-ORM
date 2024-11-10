@@ -10,7 +10,7 @@ from tags.models import TaggedItem
 def say_hello(request):
     # QuerySet Cache
     queryset = Product.objects.all()
-    list[0]
+    queryset[0]
     list(queryset)
     
        
