@@ -8,17 +8,11 @@ from tags.models import TaggedItem
 
 
 def say_hello(request):
-    # Creating Objects or Inserting Objects 
-    # first approach
-    collection = Collection()
-    collection.title = 'Video Games'
-    collection.featured_product = Product(pk=1)
+    # Updating Objects 
+    collection = Collection(pk=11)
+    collection.title = 'Games'
+    collection.featured_product = None
     collection.save()
-    
 
-    # Second approach
-    # collection = Collection.objects.create(name='a', featured_product_id=1)
-    # collection.id
-    
-       
+
     return render(request, 'hello.html', {'name': 'Bikram'})
