@@ -8,8 +8,10 @@ from tags.models import TaggedItem
 
 
 def say_hello(request):
-    # Custom Managers
-    TaggedItem.objects.get_tags_for(Product, 1) 
+    # QuerySet Cache
+    queryset = Product.objects.all()
+    list[0]
+    list(queryset)
     
        
     return render(request, 'hello.html', {'name': 'Bikram'})
