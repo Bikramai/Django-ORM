@@ -33,3 +33,21 @@ Object-Relational Mappers(ORM) and the problem they try to solve. So we know tha
 - Deleting Objects
 - Transactions
 - Executing Raw SQL Queries
+
+# Django Admin Site
+
+- Setting Up the Admin Site
+- Registering Models
+- Customizing the List Page
+- Adding Cmputed Columns
+- Selecting Related objects
+- Overriding the Base QuerySet
+- Providing Links to Other Pages
+- Adding Search to the List Page
+- Adding Filtering to the List Page
+- Creating Custom Actions
+- Customizing Forms
+- Adding Data Validation
+- Editing Children Using Inlines
+- Using Generic Relations
+- Extending Pluggable Apps
