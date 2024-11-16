@@ -35,6 +35,11 @@ Object-Relational Mappers(ORM) and the problem they try to solve. So we know tha
 - Executing Raw SQL Queries
 
 # Django Admin Site
+The Django Admin site is a powerful built-in 
+feature that allows you to easily manage your 
+application's data through a web interface. 
+It's a great tool for creating, reading, updating, 
+and deleting (CRUD) operations on your database models
 
 - Setting Up the Admin Site
 - Registering Models
