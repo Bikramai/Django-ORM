@@ -23,6 +23,7 @@ class ProductAdmin(admin.ModelAdmin):
 class CollectionAdmin(admin.ModelAdmin):
     list_display = ['title', 'products_count']
     
+    @admin.display(ordering='products_count')
     def products_count(self, collection):
         return collection.products_count
 
