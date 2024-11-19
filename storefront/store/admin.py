@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.db.models.aggregates import Count
+from django.utils.html import format_html
 from . import models
 
 @admin.register(models.Product)
@@ -17,6 +19,18 @@ class ProductAdmin(admin.ModelAdmin):
             return 'Low'
         return 'OK'
 
+@admin.register(models.Collection)
+class CollectionAdmin(admin.ModelAdmin):
+    list_display = ['title', 'products_count']
+    
+    def products_count(self, collection):
+        return collection.products_count
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).annotate(
+            products_count=Count('product')
+        )
+
 @admin.register(models.Customer)
 class CustomerAdmin(admin.ModelAdmin):
     list_display = ['first_name', 'last_name', 'membership']
@@ -30,4 +44,3 @@ class OrderAdmin(admin.ModelAdmin):
     list_per_page = 10
 
 
-admin.site.register(models.Collection)
