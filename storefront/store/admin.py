@@ -1,8 +1,18 @@
+from typing import Any
 from django.contrib import admin
 from django.db.models.aggregates import Count
 from django.urls import reverse
 from django.utils.html import format_html, urlencode
 from . import models
+
+class InventoryFilter(admin.SimpleListFilter):
+    title = 'inventory'
+    parameter_name = 'inventory'
+
+    def lookups(self, request, model_admin):
+        return [
+            ('<10', 'Low')
+        ]
 
 @admin.register(models.Product)
 class ProductAdmin(admin.ModelAdmin):
