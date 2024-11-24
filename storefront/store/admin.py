@@ -72,6 +72,7 @@ class CustomerAdmin(admin.ModelAdmin):
 
 @admin.register(models.Order)
 class OrderAdmin(admin.ModelAdmin):
+    autocomplete_fields = ['collection']
     list_display = ['id', 'placed_at', 'customer']
     list_per_page = 10
 
