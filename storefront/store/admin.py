@@ -32,6 +32,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_per_page = 10
     list_select_related = ['collection']
 
+
     def collection_title(self, product):
         return product.collection.title
 
@@ -71,6 +72,7 @@ class CustomerAdmin(admin.ModelAdmin):
     search_fields = ['first_name__istartswith', 'last_name__istartswith']
 
 class OrderItemInline(admin.TabularInline):
+    autocomplete_fields = ['product']
     model = models.OrderItem
 
 @admin.register(models.Order)
