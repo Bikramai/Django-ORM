@@ -84,6 +84,7 @@ class CustomerAdmin(admin.ModelAdmin):
 class OrderItemInline(admin.TabularInline):
     # autocomplete_fields = ['product']
     model = models.OrderItem
+    extra = 0
 
 @admin.register(models.Order)
 class OrderAdmin(admin.ModelAdmin):
@@ -91,5 +92,7 @@ class OrderAdmin(admin.ModelAdmin):
     inlines = [OrderItemInline]
     list_display = ['id', 'placed_at', 'customer']
     list_per_page = 10
+
+
 
 
